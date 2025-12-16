@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet ID - [Luffy]</title>
+    <title>Pet ID - Luffy</title>
     <style>
         * {
             margin: 0;
@@ -92,6 +92,16 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-bottom: 15px;
+        }
+
+        .info-grid.three-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            .info-grid.three-col {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .info-item {
@@ -216,8 +226,8 @@
     <div class="container">
         <!-- Header with Pet Photo and Name -->
         <div class="header">
-            <img src="https://via.placeholder.com/150" alt="Pet Photo" class="pet-photo">
-            <div class="pet-name">[Luffy]</div>
+            <img src="Luffy.jpg" alt="Pet Photo" class="pet-photo">
+            <div class="pet-name">Luffy</div>
             <div class="pet-tagline">🐾 Please help me get home! 🐾</div>
         </div>
 
@@ -233,22 +243,26 @@
                     <span class="icon">🐕</span>
                     <span>About Me</span>
                 </div>
-                <div class="info-grid">
+                <div class="info-grid three-col"></div>
                     <div class="info-item">
                         <div class="info-label">Breed</div>
-                        <div class="info-value">[Breed]</div>
+                        <div class="info-value">Golden Retriever</div>
                     </div>
                     <div class="info-item">
                         <div class="info-label">Age</div>
-                        <div class="info-value">[Age]</div>
+                        <div class="info-value" id="pet-age">Calculating...</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Birthdate</div>
+                        <div class="info-value">December 30, 2022</div>
                     </div>
                     <div class="info-item">
                         <div class="info-label">Color</div>
-                        <div class="info-value">[Color]</div>
+                        <div class="info-value">Golden</div>
                     </div>
                     <div class="info-item">
                         <div class="info-label">Gender</div>
-                        <div class="info-value">[Gender]</div>
+                        <div class="info-value">Male</div>
                     </div>
                 </div>
             </div>
@@ -260,13 +274,13 @@
                     <span>Primary Owner</span>
                 </div>
                 <div class="contact-name">Nischalgouda Patil</div>
-                <a href="tel:8197668957" class="contact-button btn-call">
+                <a href="tel:+918197668957" class="contact-button btn-call">
                     📞 Call Owner
                 </a>
-                <a href="sms:8197668957" class="contact-button btn-sms">
+                <a href="sms:+918197668957" class="contact-button btn-sms">
                     💬 Text Owner
                 </a>
-                <a href="mailto:owner@example.com" class="contact-button btn-email">
+                <a href="mailto:nizplaystation@gmail.com" class="contact-button btn-email"></a>
                     ✉️ Email Owner
                 </a>
             </div>
@@ -275,14 +289,21 @@
             <div class="section">
                 <div class="section-title">
                     <span class="icon">🚨</span>
-                    <span>Emergency Contact</span>
+                    <span>Emergency Contacts</span>
                 </div>
-                <div class="contact-name">[Emergency Contact Name]</div>
-                <a href="tel:+1234567890" class="contact-button btn-call">
-                    📞 Call Emergency Contact
+                <div class="contact-name">Poornima</div>
+                <a href="tel:+919902688568" class="contact-button btn-call">
+                    📞 Call Poornima
                 </a>
-                <a href="sms:+1234567890" class="contact-button btn-sms">
-                    💬 Text Emergency Contact
+                <a href="sms:+919902688568" class="contact-button btn-sms">
+                    💬 Text Poornima
+                </a>
+                <div class="contact-name" style="margin-top: 20px;">Kavya</div>
+                <a href="tel:+919743176959" class="contact-button btn-call">
+                    📞 Call Kavya
+                </a>
+                <a href="sms:+919743176959" class="contact-button btn-sms">
+                    💬 Text Kavya
                 </a>
             </div>
 
@@ -294,15 +315,15 @@
                 </div>
                 <div class="medical-item">
                     <div class="medical-label">⚠️ Allergies</div>
-                    <div class="medical-value">[List any allergies or write "None known"]</div>
+                    <div class="medical-value">None, but please don't allow him to be too much on wet surfaces</div>
                 </div>
                 <div class="medical-item">
                     <div class="medical-label">💊 Medications</div>
-                    <div class="medical-value">[List current medications or write "None"]</div>
+                    <div class="medical-value">None</div>
                 </div>
                 <div class="medical-item">
                     <div class="medical-label">🏥 Medical Conditions</div>
-                    <div class="medical-value">[List any medical conditions or write "None"]</div>
+                    <div class="medical-value">None, but afraid of thunder and firecrackers</div>
                 </div>
             </div>
 
@@ -312,18 +333,30 @@
                     <span class="icon">🏥</span>
                     <span>Veterinarian</span>
                 </div>
-                <div class="contact-name">[Vet Clinic Name]</div>
+                <div class="contact-name">Petville Veterinary Services Belgaum</div>
                 <div class="info-item" style="margin-bottom: 12px;">
-                    <div class="info-label">Address</div>
-                    <div class="info-value">[Vet Address]</div>
+                    <div class="info-label">Phone</div>
+                    <div class="info-value">+91 7349408567</div>
                 </div>
-                <a href="tel:+1234567890" class="contact-button btn-call">
+                <a href="tel:+917349408567" class="contact-button btn-call"></a>
                     📞 Call Veterinarian
                 </a>
             </div>
 
-            <!-- Reward Information (Optional) -->
+            <!-- Home Address -->
             <div class="section">
+                <div class="section-title">
+                    <span class="icon">�</spaan>
+                    <span>Home Address</span>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Address</div>
+                    <div class="info-value">Ramtirth Nagar Belagavi</div>
+                </div>
+            </div>
+
+            <!-- Reward Information (Optional) -->
+            <!-- <div class="section">
                 <div class="section-title">
                     <span class="icon">🎁</span>
                     <span>Reward</span>
@@ -334,8 +367,48 @@
                         [Specify reward amount or remove this section]
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+
+    <script>
+        // Calculate age from birthdate
+        function calculateAge() {
+            const birthDate = new Date('2022-12-30');
+            const today = new Date();
+            
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            
+            // Adjust if birthday hasn't occurred this year yet
+            if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
+                years--;
+                months += 12;
+            }
+            
+            // Adjust months if day hasn't occurred this month yet
+            if (today.getDate() < birthDate.getDate()) {
+                months--;
+            }
+            
+            // Format the age string
+            let ageString = '';
+            if (years > 0) {
+                ageString += years + (years === 1 ? ' year' : ' years');
+            }
+            if (months > 0) {
+                if (ageString) ageString += ', ';
+                ageString += months + (months === 1 ? ' month' : ' months');
+            }
+            if (!ageString) {
+                ageString = 'Less than a month';
+            }
+            
+            document.getElementById('pet-age').textContent = ageString;
+        }
+        
+        // Calculate age when page loads
+        calculateAge();
+    </script>
 </body>
 </html>
