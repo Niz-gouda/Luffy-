@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet ID - [Luffy]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .pet-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+            background: #f0f0f0;
+        }
+
+        .pet-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .pet-tagline {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .contact-button {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-button:active {
+            transform: scale(0.98);
+        }
+
+        .btn-call {
+            background: #10b981;
+            color: white;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-email {
+            background: #3b82f6;
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-sms {
+            background: #8b5cf6;
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .contact-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .medical-item {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .medical-label {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 5px;
+        }
+
+        .medical-value {
+            color: #78350f;
+        }
+
+        .reward-box {
+            background: #dcfce7;
+            border: 2px solid #10b981;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .reward-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #065f46;
+        }
+
+        .emergency-banner {
+            background: #fee2e2;
+            border: 2px solid #ef4444;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .emergency-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #991b1b;
+        }
+
+        @media (max-width: 480px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Pet Photo and Name -->
+        <div class="header">
+            <img src="https://via.placeholder.com/150" alt="Pet Photo" class="pet-photo">
+            <div class="pet-name">[Luffy]</div>
+            <div class="pet-tagline">🐾 Please help me get home! 🐾</div>
+        </div>
+
+        <div class="content">
+            <!-- Emergency Banner -->
+            <div class="emergency-banner">
+                <div class="emergency-text">⚠️ I'M LOST! Please contact my owner ⚠️</div>
+            </div>
+
+            <!-- Pet Details Section -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">🐕</span>
+                    <span>About Me</span>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Breed</div>
+                        <div class="info-value">[Breed]</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Age</div>
+                        <div class="info-value">[Age]</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Color</div>
+                        <div class="info-value">[Color]</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Gender</div>
+                        <div class="info-value">[Gender]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Primary Owner Contact -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">👤</span>
+                    <span>Primary Owner</span>
+                </div>
+                <div class="contact-name">[Owner Name]</div>
+                <a href="tel:819768957" class="contact-button btn-call">
+                    📞 Call Owner
+                </a>
+                <a href="sms:+1234567890" class="contact-button btn-sms">
+                    💬 Text Owner
+                </a>
+                <a href="mailto:owner@example.com" class="contact-button btn-email">
+                    ✉️ Email Owner
+                </a>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">🚨</span>
+                    <span>Emergency Contact</span>
+                </div>
+                <div class="contact-name">[Emergency Contact Name]</div>
+                <a href="tel:+1234567890" class="contact-button btn-call">
+                    📞 Call Emergency Contact
+                </a>
+                <a href="sms:+1234567890" class="contact-button btn-sms">
+                    💬 Text Emergency Contact
+                </a>
+            </div>
+
+            <!-- Medical Information -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">⚕️</span>
+                    <span>Medical Information</span>
+                </div>
+                <div class="medical-item">
+                    <div class="medical-label">⚠️ Allergies</div>
+                    <div class="medical-value">[List any allergies or write "None known"]</div>
+                </div>
+                <div class="medical-item">
+                    <div class="medical-label">💊 Medications</div>
+                    <div class="medical-value">[List current medications or write "None"]</div>
+                </div>
+                <div class="medical-item">
+                    <div class="medical-label">🏥 Medical Conditions</div>
+                    <div class="medical-value">[List any medical conditions or write "None"]</div>
+                </div>
+            </div>
+
+            <!-- Veterinarian Contact -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">🏥</span>
+                    <span>Veterinarian</span>
+                </div>
+                <div class="contact-name">[Vet Clinic Name]</div>
+                <div class="info-item" style="margin-bottom: 12px;">
+                    <div class="info-label">Address</div>
+                    <div class="info-value">[Vet Address]</div>
+                </div>
+                <a href="tel:+1234567890" class="contact-button btn-call">
+                    📞 Call Veterinarian
+                </a>
+            </div>
+
+            <!-- Reward Information (Optional) -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">🎁</span>
+                    <span>Reward</span>
+                </div>
+                <div class="reward-box">
+                    <div class="reward-text">💰 Reward offered for safe return!</div>
+                    <div style="margin-top: 8px; color: #065f46;">
+                        [Specify reward amount or remove this section]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
